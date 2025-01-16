@@ -26,7 +26,7 @@ O objetivo do portfólio é compartilhar os projetos que desenvolvi, incluindo a
 
 ## Como Visualizar o Portfólio
 
-Acesse o portfólio online em [GitHub Pages](https://alencarrgabriel.github.io/portfolio) ou faça o download dos arquivos deste repositório e abra o arquivo `index.html` em seu navegador favorito.
+Acesse o portfólio online em [GitHub Pages](https://alencarrgabriel.github.io/#portfolio) ou faça o download dos arquivos deste repositório e abra o arquivo `index.html` em seu navegador favorito.
 
 ## Meu Objetivo
 
