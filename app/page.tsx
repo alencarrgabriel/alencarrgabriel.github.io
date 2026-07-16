@@ -780,8 +780,8 @@ function ContactTerminal({ lang }: { lang: Lang }) {
             </div>
             <div className="flex gap-4">
               <span className="text-zinc-600 w-16 shrink-0">linkedin</span>
-              <a href="https://www.linkedin.com/in/gabriel-alencar-a04a12267/" target="_blank" rel="noreferrer" className="text-sky-400 hover:underline">
-                linkedin.com/in/gabriel-alencar-a04a12267
+              <a href="https://www.linkedin.com/in/gabriel-alencar-dev/" target="_blank" rel="noreferrer" className="text-sky-400 hover:underline">
+                linkedin.com/in/gabriel-alencar-dev
               </a>
             </div>
           </div>
@@ -878,7 +878,7 @@ export default function Home() {
                 github →
               </a>
               <a
-                href="https://www.linkedin.com/in/gabriel-alencar-a04a12267/"
+                href="https://www.linkedin.com/in/gabriel-alencar-dev/"
                 target="_blank"
                 rel="noreferrer"
                 className="text-xs px-3.5 py-2 bg-zinc-900 border border-zinc-800 rounded-lg text-zinc-400 hover:text-zinc-100 hover:border-zinc-700 transition-all"
