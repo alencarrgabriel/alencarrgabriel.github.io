@@ -6,7 +6,8 @@ import {
   SiTypescript, SiNodedotjs, SiExpress, SiPostgresql, SiRedis, SiDocker,
   SiPix, SiCaddy, SiSentry, SiNestjs, SiNextdotjs, SiPrisma, SiFlutter,
   SiDart, SiTypeorm, SiMinio, SiSocketdotio, SiFirebase, SiGithubactions,
-  SiPython, SiQt, SiSqlite, SiTurborepo, SiN8N, SiWhatsapp,
+  SiPython, SiQt, SiSqlite, SiTurborepo, SiN8N, SiWhatsapp, SiReact, SiVite,
+  SiTailwindcss, SiFastapi, SiSupabase, SiStripe,
 } from "react-icons/si"
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -20,6 +21,7 @@ interface Project {
   highlights: Record<Lang, string[]>
   tags: string[]
   github: string
+  live?: string
 }
 
 // ─── Tech icon map ────────────────────────────────────────────────────────────
@@ -52,6 +54,13 @@ const ICON_MAP: Record<string, { icon: IconType; color: string }> = {
   "SQLite":          { icon: SiSqlite,        color: "#4E9CC4" },
   "Turborepo":       { icon: SiTurborepo,     color: "#EF4444" },
   "n8n":             { icon: SiN8N,           color: "#EA4B71" },
+  "React":           { icon: SiReact,         color: "#61DAFB" },
+  "Vite":            { icon: SiVite,          color: "#646CFF" },
+  "Tailwind CSS":    { icon: SiTailwindcss,   color: "#38BDF8" },
+  "FastAPI":         { icon: SiFastapi,       color: "#009688" },
+  "Next.js 14":      { icon: SiNextdotjs,     color: "#EDEDED" },
+  "Supabase":        { icon: SiSupabase,      color: "#3ECF8E" },
+  "Stripe":          { icon: SiStripe,        color: "#635BFF" },
 }
 
 interface TerminalLine {
@@ -111,6 +120,7 @@ const PROJECTS: Project[] = [
     },
     tags: ["NestJS", "Next.js 15", "TypeScript", "PostgreSQL", "Prisma", "Docker"],
     github: "",
+    live: "https://app.lunnaapp.tech/",
   },
   {
     dir: "intera-edu/",
@@ -208,6 +218,77 @@ const PROJECTS: Project[] = [
     tags: ["NestJS", "Next.js 15", "Turborepo", "Prisma", "n8n", "Docker"],
     github: "https://github.com/fiveonesolutions/platform",
   },
+  {
+    dir: "margemreal/",
+    status: "BETA",
+    desc: {
+      pt: "SaaS B2B de Landed Cost para importação China → Brasil. Em produção, pré-receita.",
+      en: "B2B Landed Cost SaaS for China → Brazil imports. In production, pre-revenue.",
+    },
+    highlights: {
+      pt: [
+        "Motor tributário determinístico (II→IPI→PIS→COFINS→ICMS) com Decimal puro e câmbio PTAX do Bacen",
+        "Arquitetura em camadas (api/application/domain/infra) com snapshots imutáveis e auditáveis",
+        "Sourcing integrado com busca de fornecedores no Alibaba (Trade Assurance, score de confiança)",
+        "Backend FastAPI (Railway) + frontend Next.js 14 (Vercel), Supabase (Postgres + Auth) e Redis",
+      ],
+      en: [
+        "Deterministic tax engine (II→IPI→PIS→COFINS→ICMS) using pure Decimal and BACEN PTAX exchange rates",
+        "Layered architecture (api/application/domain/infra) with immutable, auditable snapshots",
+        "Integrated sourcing with Alibaba supplier search (Trade Assurance, trust score)",
+        "FastAPI backend (Railway) + Next.js 14 frontend (Vercel), Supabase (Postgres + Auth) and Redis",
+      ],
+    },
+    tags: ["Python", "FastAPI", "Next.js 14", "Supabase", "PostgreSQL", "Redis", "Docker", "Stripe"],
+    github: "",
+    live: "https://margemreal.vercel.app/",
+  },
+  {
+    dir: "star-acessoria/",
+    status: "USED",
+    desc: {
+      pt: "Landing page para corretora de seguros. Cotação de planos de saúde via WhatsApp.",
+      en: "Landing page for an insurance brokerage. Health plan quotes via WhatsApp.",
+    },
+    highlights: {
+      pt: [
+        "Página de captação de leads com CTA direto para cotação no WhatsApp",
+        "SEO on-page com Google Tag Manager e Analytics configurados",
+        "Design responsivo focado em conversão",
+      ],
+      en: [
+        "Lead-capture page with a direct WhatsApp quote CTA",
+        "On-page SEO with Google Tag Manager and Analytics configured",
+        "Responsive, conversion-focused design",
+      ],
+    },
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    github: "",
+    live: "https://www.staracessoria.com.br/",
+  },
+  {
+    dir: "fisiocorpus/",
+    status: "USED",
+    desc: {
+      pt: "Landing page para clínica de fisioterapia em Brasília. Agendamento via WhatsApp.",
+      en: "Landing page for a physiotherapy clinic in Brasília. WhatsApp appointment booking.",
+    },
+    highlights: {
+      pt: [
+        "Dados estruturados (Schema.org) para SEO local de negócio",
+        "Catálogo de serviços e especialidades da clínica",
+        "Integração com WhatsApp para agendamento de consultas",
+      ],
+      en: [
+        "Structured data (Schema.org) for local business SEO",
+        "Service and specialty catalog for the clinic",
+        "WhatsApp integration for appointment booking",
+      ],
+    },
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    github: "",
+    live: "https://www.fisiocorpusdf.com.br/",
+  },
 ]
 
 const ABOUT: { bio: Record<Lang, string[]>; now: Record<Lang, { role: string; org: string }[]> } = {
@@ -215,14 +296,14 @@ const ABOUT: { bio: Record<Lang, string[]>; now: Record<Lang, { role: string; or
     pt: [
       "Sou desenvolvedor de software com foco em entregar produtos que funcionam de verdade. Tenho experiência construindo aplicações web, mobile e desktop — do backend ao deploy.",
       "Fundei a FiveOne Solutions, onde construo soluções com NFC, QR Code, automações e IA. O Mão na Roda — chatbot de consulta veicular com funil de pagamento PIX — está em produção gerando receita recorrente.",
-      "Também tenho um app desktop (Gerador de Recibos) usado operacionalmente por uma empresa, duas landing pages em uso por clientes reais, e o Lunna (SaaS de agendamentos) em fase final de desenvolvimento.",
+      "Também tenho um app desktop (Gerador de Recibos) usado operacionalmente por uma empresa, landing pages em uso por clientes reais (STAR Assessoria, Fisio Corpus), o Lunna (SaaS de agendamentos) já em beta, e o MargemReal — motor de Landed Cost para importação China-Brasil — rodando em produção, ainda pré-receita.",
       "Estudo Cybersecurity com foco em pentest e estou concluindo graduação em Análise e Desenvolvimento de Sistemas.",
       "Acredito que um bom desenvolvedor entrega software que resolve problemas reais — não apenas código bem escrito.",
     ],
     en: [
       "I'm a software developer focused on shipping products that actually work. I have experience building web, mobile and desktop applications — from backend to deploy.",
       "I founded FiveOne Solutions, where I build solutions with NFC, QR Code, automation and AI. Mão na Roda — a WhatsApp vehicle-lookup chatbot with a PIX payment funnel — is in production generating recurring revenue.",
-      "I also have a desktop app (Gerador de Recibos) used operationally by a company, two landing pages in use by real clients, and Lunna (a scheduling SaaS) in its final development stage.",
+      "I also have a desktop app (Gerador de Recibos) used operationally by a company, landing pages in use by real clients (STAR Assessoria, Fisio Corpus), Lunna (a scheduling SaaS) already in beta, and MargemReal — a Landed Cost engine for China-Brazil imports — running in production, still pre-revenue.",
       "I'm studying Cybersecurity with a focus on pentesting and finishing my degree in Systems Analysis and Development.",
       "I believe a good developer delivers software that solves real problems — not just well-written code.",
     ],
@@ -509,19 +590,36 @@ function ProjectsTerminal({ lang, projects }: { lang: Lang; projects: Project[] 
                     )
                   })}
                 </div>
-                {/* GitHub link */}
-                {proj.github ? (
-                  <a
-                    href={proj.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[12px] text-[#39FF14] hover:underline"
-                  >
-                    ↗ {proj.github.replace("https://", "")}
-                  </a>
-                ) : (
-                  <span className="text-[12px] text-zinc-600 italic">repositório privado</span>
-                )}
+                {/* Links */}
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5">
+                  {proj.live && (
+                    <a
+                      href={proj.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[12px] text-[#39FF14] hover:underline"
+                    >
+                      <span className="text-zinc-600">live</span>
+                      ↗ {proj.live.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                    </a>
+                  )}
+                  {proj.github && (
+                    <a
+                      href={proj.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 text-[12px] text-sky-400 hover:underline"
+                    >
+                      <span className="text-zinc-600">code</span>
+                      ↗ {proj.github.replace("https://", "")}
+                    </a>
+                  )}
+                  {!proj.live && !proj.github && (
+                    <span className="text-[12px] text-zinc-600 italic">
+                      {lang === "pt" ? "repositório privado" : "private repository"}
+                    </span>
+                  )}
+                </div>
               </div>
             )}
           </div>
