@@ -2,6 +2,10 @@
 
 import { useState, useEffect, useCallback } from "react"
 import type { IconType } from "react-icons"
+import { useLang } from "@/lib/lang"
+import { posts as allPosts } from "@/lib/content"
+import { getPublishedPosts, formatDate } from "@/lib/posts"
+import { PostTypeBadge } from "@/components/terminal/Badge"
 import {
   SiTypescript, SiNodedotjs, SiExpress, SiPostgresql, SiRedis, SiDocker,
   SiPix, SiCaddy, SiSentry, SiNestjs, SiNextdotjs, SiPrisma, SiFlutter,
@@ -795,10 +799,61 @@ function ContactTerminal({ lang }: { lang: Lang }) {
   )
 }
 
+// ─── Recent Posts ─────────────────────────────────────────────────────────────
+
+function RecentPosts({ lang }: { lang: Lang }) {
+  const published = getPublishedPosts(allPosts).slice(0, 3)
+  if (published.length === 0) return null
+
+  const cmd = lang === "pt"
+    ? "ls -lt ~/log | head -3"
+    : "ls -lt ~/log | head -3"
+
+  const linkLabel = lang === "pt" ? "ver todos os posts →" : "see all posts →"
+
+  return (
+    <section className="max-w-5xl mx-auto px-5 pb-24 scroll-mt-16">
+      <TerminalWindow title="gabriel@fiveone: ~/log">
+        <div className="mb-4">
+          <Prompt path="~" />
+          <span className="text-zinc-300">{cmd}</span>
+        </div>
+
+        <div className="space-y-0 divide-y divide-zinc-800/60">
+          {published.map((post) => (
+            <div key={post.slug} className="flex items-start gap-3 py-2.5">
+              <span className="text-zinc-700 text-[11px] tabular-nums shrink-0 mt-0.5 hidden sm:block w-20">
+                {formatDate(post.date)}
+              </span>
+              <PostTypeBadge type={post.type as "writeup" | "til" | "leetcode" | "notes" | "log"} />
+              <div className="min-w-0">
+                <a
+                  href={`/log/${post.slug}`}
+                  className="text-zinc-200 hover:text-[#39FF14] transition-colors text-[13px]"
+                >
+                  {post.title}
+                </a>
+                <p className="text-zinc-600 text-[11px] mt-0.5 truncate">{post.summary}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-4 pt-4 border-t border-zinc-800/60">
+          <Prompt />
+          <a href="/log" className="text-[#39FF14] hover:underline text-[13px]">
+            {linkLabel}
+          </a>
+        </div>
+      </TerminalWindow>
+    </section>
+  )
+}
+
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function Home() {
-  const [lang, setLang] = useState<Lang>("pt")
+  const { lang, setLang } = useLang()
 
   const available = lang === "pt" ? "disponível para trabalho remoto" : "available for remote work"
   const aboutLabel = lang === "pt" ? "sobre" : "about"
@@ -829,6 +884,12 @@ export default function Home() {
             </a>
             <a href="#contact" className="text-xs text-zinc-600 hover:text-zinc-300 transition-colors hidden sm:block">
               {contactLabel}
+            </a>
+            <a href="/log" className="text-xs text-violet-400 hover:text-violet-300 transition-colors hidden sm:block">
+              log
+            </a>
+            <a href="/roadmap" className="text-xs text-zinc-600 hover:text-zinc-300 transition-colors hidden sm:block">
+              roadmap
             </a>
 
             {/* Language toggle */}
@@ -915,9 +976,12 @@ export default function Home() {
       </section>
 
       {/* ── Contact ────────────────────────────────────────────────────── */}
-      <section id="contact" className="max-w-5xl mx-auto px-5 pb-24 scroll-mt-16">
+      <section id="contact" className="max-w-5xl mx-auto px-5 pb-16 scroll-mt-16">
         <ContactTerminal lang={lang} />
       </section>
+
+      {/* ── Recent log posts ───────────────────────────────────────────── */}
+      <RecentPosts lang={lang} />
 
       {/* ── Footer ─────────────────────────────────────────────────────── */}
       <footer className="border-t border-zinc-900 py-6 text-center text-[11px] text-zinc-700">

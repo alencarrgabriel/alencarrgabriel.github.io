@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { JetBrains_Mono, Inter } from "next/font/google"
 import "./globals.css"
+import { LangProvider } from "@/lib/lang"
 
 const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
@@ -17,7 +18,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Gabriel Alencar — Software Developer",
   description: "Software Developer: Web · Mobile · Desktop. Co-founder @ FiveOne Solutions. Projects in production.",
-  keywords: ["NestJS", "Flutter", "Next.js", "TypeScript", "Python", "Software Developer"],
+  keywords: ["NestJS", "Flutter", "Next.js", "TypeScript", "Python", "Software Developer", "Cybersecurity", "Pentest"],
   openGraph: {
     title: "Gabriel Alencar — Software Developer",
     description: "Web · Mobile · Desktop. Projects that ship.",
@@ -29,7 +30,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="pt-BR">
       <body className={`${jetbrains.variable} ${inter.variable} bg-[#09090B] text-zinc-100 antialiased`}>
-        {children}
+        <LangProvider>
+          {children}
+        </LangProvider>
       </body>
     </html>
   )

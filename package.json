@@ -6,13 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "new-post": "node scripts/new-post.mjs"
   },
   "dependencies": {
     "next": "^15.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-icons": "^5.7.0"
+    "react-icons": "^5.7.0",
+    "rehype-pretty-code": "^0.14.5",
+    "shiki": "^4.4.3",
+    "velite": "^0.4.0"
   },
   "devDependencies": {
     "@types/node": "^20",

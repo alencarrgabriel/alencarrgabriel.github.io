@@ -1,0 +1,88 @@
+- track: "PortSwigger Web Security Academy"
+  items:
+    - name: "SQL injection"
+      status: wip
+      progress: [12, 18]
+      tags: [sqli, portswigger]
+    - name: "Authentication"
+      status: todo
+      progress: [0, 14]
+      tags: [auth, portswigger]
+    - name: "Path traversal"
+      status: todo
+      progress: [0, 9]
+      tags: [lfi, portswigger]
+    - name: "Command injection"
+      status: todo
+      progress: [0, 5]
+      tags: [rce, portswigger]
+    - name: "Business logic vulnerabilities"
+      status: todo
+      progress: [0, 11]
+      tags: [logic, portswigger]
+    - name: "XSS"
+      status: todo
+      progress: [0, 30]
+      tags: [xss, portswigger]
+
+- track: "HackTheBox — Starting Point"
+  items:
+    - name: "Tier 0"
+      status: done
+      progress: [5, 5]
+      tags: [htb, recon]
+    - name: "Tier 1"
+      status: wip
+      progress: [2, 8]
+      tags: [htb, exploitation]
+    - name: "Tier 2"
+      status: todo
+      progress: [0, 10]
+      tags: [htb, privesc]
+
+- track: "Blind 75 — LeetCode"
+  items:
+    - name: "Arrays & Hashing"
+      status: wip
+      progress: [4, 9]
+      tags: [leetcode, arrays]
+    - name: "Two Pointers"
+      status: todo
+      progress: [0, 5]
+      tags: [leetcode, two-pointers]
+    - name: "Sliding Window"
+      status: todo
+      progress: [0, 6]
+      tags: [leetcode, sliding-window]
+    - name: "Stack"
+      status: todo
+      progress: [0, 7]
+      tags: [leetcode, stack]
+    - name: "Binary Search"
+      status: todo
+      progress: [0, 7]
+      tags: [leetcode, binary-search]
+    - name: "Linked List"
+      status: todo
+      progress: [0, 11]
+      tags: [leetcode, linked-list]
+    - name: "Trees"
+      status: todo
+      progress: [0, 15]
+      tags: [leetcode, trees]
+    - name: "Heap / Priority Queue"
+      status: todo
+      progress: [0, 5]
+      tags: [leetcode, heap]
+    - name: "Backtracking"
+      status: todo
+      progress: [0, 9]
+      tags: [leetcode, backtracking]
+    - name: "Graphs"
+      status: todo
+      progress: [0, 13]
+      tags: [leetcode, graphs]
+    - name: "Dynamic Programming"
+      status: todo
+      progress: [0, 23]
+      tags: [leetcode, dp]
