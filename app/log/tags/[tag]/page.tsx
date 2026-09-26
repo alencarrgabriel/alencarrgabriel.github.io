@@ -14,9 +14,9 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  // Use ALL posts (including drafts) so tags always exist for static export.
-  const tags = Object.keys(getAllTags(allPosts))
-  return tags.map((tag) => ({ tag }))
+  const tags = Object.keys(getAllTags(getPublishedPosts(allPosts)))
+  // Static export rejects an empty list; the placeholder renders notFound().
+  return tags.length ? tags.map((tag) => ({ tag })) : [{ tag: "_" }]
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

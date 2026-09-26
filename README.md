@@ -6,24 +6,32 @@ Personal portfolio and technical blog (alencar.log) built with Next.js 15 and de
 
 - **Next.js 15** — static export (`output: "export"`)
 - **Velite** — content layer, compiles Markdown/MDX with typed frontmatter
-- **Tailwind CSS v4**
+- **Tailwind CSS v3**
 - **rehype-pretty-code + Shiki** — build-time syntax highlighting (theme: `vitesse-dark`)
 
 ---
 
 ## Writing a post
 
-### Quick start
-
 ```bash
-npm run new-post -- <type> <slug>
-# e.g.
-npm run new-post -- writeup htb-machine-name
-npm run new-post -- til ssh-tunneling
-npm run new-post -- leetcode two-sum
+npm run post                      # asks type + title
+npm run post -- til "SSH config"  # or pass them directly
 ```
 
-This creates `content/log/<slug>.md` pre-filled with the correct frontmatter for that type.
+Creates `content/log/<slug>.md` as a **draft** (`draft: true`), dated today, and opens it in VS Code.
+Write it, preview with `npm run dev` (drafts are visible there), then:
+
+```bash
+npm run ship                      # lists drafts, asks which one
+npm run ship -- ssh-config        # or pass the slug
+```
+
+`ship` sets `draft: false` and the date to today, validates the frontmatter (Velite),
+commits only that file and asks before pushing. The push triggers the GitHub Pages deploy (~2 min).
+If validation fails, the file goes back to draft and nothing is committed.
+
+Manual alternative (e.g. from the phone via github.dev): copy a template from `content/_templates/`
+into `content/log/`, set `draft: false`, commit to `main`.
 
 ### Types
 
@@ -56,8 +64,8 @@ lang: pt                    # pt | en (default: pt)
 
 ### Drafts
 
-- Posts with `draft: true` are **visible in `npm run dev`** but **excluded from production builds**.
-- To publish, remove `draft: true` (or set it to `false`) and push.
+- Posts with `draft: true` are **visible in `npm run dev`** but stripped from the generated data in production builds (they never reach the site or the JS bundle).
+- Publish with `npm run ship`, or set `draft: false` by hand and push.
 
 ### MDX features
 
@@ -107,7 +115,8 @@ The first `wip` item is shown as "now" on `/log` and the home page.
 ```bash
 npm run dev       # start dev server (drafts visible)
 npm run build     # production build to out/
-npm run new-post  # scaffold a new post
+npm run post      # scaffold a new draft
+npm run ship      # publish a draft (validate + commit + push)
 ```
 
 The site deploys automatically to GitHub Pages on push to `main`.

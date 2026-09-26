@@ -6,7 +6,7 @@ tags: [leetcode, arrays]      # estrutura de dados, padrão (dp, bfs, two-pointe
 summary: "Uma linha com o insight principal da solução."
 difficulty: easy              # easy | medium | hard
 platform: leetcode
-draft: false
+draft: true
 lang: pt
 ---
 

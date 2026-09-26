@@ -5,7 +5,7 @@ type: notes
 tags: [topico]
 summary: "Uma linha descrevendo o que essas notas cobrem."
 series: ""          # opcional — agrupa com um curso ou livro
-draft: false
+draft: true
 lang: pt
 ---
 

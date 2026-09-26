@@ -59,6 +59,13 @@ export default defineConfig({
     clean: true,
   },
   collections: { posts, roadmap },
+  // Em produção, rascunhos não entram nos dados gerados, então não vão para o bundle nem para o site.
+  prepare: ({ posts }) => {
+    if (process.env.NODE_ENV !== "production") return
+    for (let i = posts.length - 1; i >= 0; i--) {
+      if (posts[i].draft) posts.splice(i, 1)
+    }
+  },
   mdx: {
     rehypePlugins: [
       [

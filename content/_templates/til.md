@@ -4,7 +4,7 @@ date: 2026-01-01
 type: til
 tags: [til, topico]
 summary: "Uma linha: o fato ou técnica aprendida."
-draft: false
+draft: true
 lang: pt
 ---
 

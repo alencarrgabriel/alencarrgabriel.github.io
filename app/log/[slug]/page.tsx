@@ -17,9 +17,9 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  // Include ALL posts (drafts too) so the route always has paths for static export.
-  // Draft posts get notFound() at render time in production.
-  return allPosts.map((p) => ({ slug: p.slug }))
+  // Drafts are already stripped from allPosts in production builds (see velite.config.ts).
+  // Static export rejects an empty list; the placeholder renders notFound().
+  return allPosts.length ? allPosts.map((p) => ({ slug: p.slug })) : [{ slug: "_" }]
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

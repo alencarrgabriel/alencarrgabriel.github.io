@@ -23,3 +23,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# velite
+/.velite/
+/public/static/
