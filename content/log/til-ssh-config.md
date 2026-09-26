@@ -1,10 +1,10 @@
 ---
 title: "TIL: ~/.ssh/config salva tempo em CTFs"
-date: 2026-09-25
+date: 2026-09-26
 type: til
 tags: [ssh, ctf, productivity, til]
 summary: "Configurar aliases SSH no ~/.ssh/config evita digitar IPs e flags toda vez que você reconecta a uma máquina do HTB."
-draft: true
+draft: false
 lang: pt
 ---
 
