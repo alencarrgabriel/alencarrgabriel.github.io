@@ -21,7 +21,7 @@ export default function TagsPage() {
         <div className="max-w-5xl mx-auto px-5 h-14 flex items-center gap-5">
           <Link href="/" className="text-sm select-none hover:opacity-80">
             <span className="text-[#39FF14]">gabriel</span>
-            <span className="text-zinc-700">@fiveone</span>
+            <span className="text-zinc-700">@alencar</span>
           </Link>
           <span className="text-zinc-800">/</span>
           <Link href="/log" className="text-zinc-500 hover:text-zinc-300 text-xs">log</Link>
@@ -31,7 +31,7 @@ export default function TagsPage() {
       </nav>
 
       <div className="max-w-5xl mx-auto px-5 pt-24 pb-24">
-        <TerminalWindow title="gabriel@fiveone: ~/log/tags">
+        <TerminalWindow title="gabriel@alencar: ~/log/tags">
           <div className="mb-5">
             <Prompt path="~/log" />
             <span className="text-zinc-300">ls -1 tags/ | sort -t: -k2 -rn</span>

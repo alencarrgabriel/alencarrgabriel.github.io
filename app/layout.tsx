@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Gabriel Alencar — Software Developer",
-  description: "Software Developer: Web · Mobile · Desktop. Co-founder @ FiveOne Solutions. Projects in production.",
+  description: "Software Developer: Web · Mobile · Desktop. Studying pentest and security, documented in public.",
   keywords: ["NestJS", "Flutter", "Next.js", "TypeScript", "Python", "Software Developer", "Cybersecurity", "Pentest"],
   openGraph: {
     title: "Gabriel Alencar — Software Developer",

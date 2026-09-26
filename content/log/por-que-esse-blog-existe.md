@@ -4,6 +4,7 @@ date: 2026-09-26
 type: log
 tags: [log, roadmap, estudos]
 summary: "Meu diário público de estudos em segurança e lógica: o que vou estudar, como vou documentar e por que estou fazendo isso."
+cover: ./img/sisyphus.jpg
 draft: false
 lang: pt
 ---
@@ -57,3 +58,5 @@ Escrever a correção junto com a falha é de propósito. Eu sou dev: entender c
 Os posts ficam em [/log](/log), com filtro por tipo e por tag, e existe [RSS](/log/feed.xml). O progresso do roadmap se atualiza conforme eu avanço.
 
 Primeiro passo: Bandit, nível 0.
+
+*Capa: Sísifo, de Ticiano (c. 1548–49), obra em domínio público.*

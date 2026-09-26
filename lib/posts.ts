@@ -46,8 +46,8 @@ export function buildSearchIndex(posts: Post[]) {
 export interface BlogStats {
   total: number
   writeups: number
-  leetcodeDone: number
-  leetcodeTarget: number
+  progressDone: number
+  progressTotal: number
   lastUpdate: string
   nowTrack: string | null
 }
@@ -56,13 +56,9 @@ export function computeBlogStats(posts: Post[], roadmap: RoadmapTrack[]): BlogSt
   const published = getPublishedPosts(posts)
   const writeups = published.filter((p) => p.type === "writeup").length
 
-  const leetcodeTrack = roadmap.find((t) => t.track.toLowerCase().includes("blind"))
-  const leetcodeDone = leetcodeTrack
-    ? leetcodeTrack.items.reduce((sum, i) => sum + (i.progress?.[0] ?? 0), 0)
-    : 0
-  const leetcodeTarget = leetcodeTrack
-    ? leetcodeTrack.items.reduce((sum, i) => sum + (i.progress?.[1] ?? 0), 0)
-    : 75
+  const items = roadmap.flatMap((t) => t.items)
+  const progressDone = items.reduce((sum, i) => sum + (i.progress?.[0] ?? 0), 0)
+  const progressTotal = items.reduce((sum, i) => sum + (i.progress?.[1] ?? 0), 0)
 
   const lastUpdate = published[0]?.date ?? new Date().toISOString().slice(0, 10)
 
@@ -74,7 +70,7 @@ export function computeBlogStats(posts: Post[], roadmap: RoadmapTrack[]): BlogSt
     ? `${wipItem.track} — ${wipItem.name}${wipItem.progress ? ` (${wipItem.progress[0]}/${wipItem.progress[1]})` : ""}`
     : null
 
-  return { total: published.length, writeups, leetcodeDone, leetcodeTarget, lastUpdate, nowTrack }
+  return { total: published.length, writeups, progressDone, progressTotal, lastUpdate, nowTrack }
 }
 
 export function formatDate(iso: string, locale = "pt-BR"): string {

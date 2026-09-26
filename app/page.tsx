@@ -295,47 +295,60 @@ const PROJECTS: Project[] = [
   },
 ]
 
+const ASCII_FIRST = `                __         _      __
+   ____ _____ _/ /_  _____(_)__  / /
+  / __ \`/ __ \`/ __ \\/ ___/ / _ \\/ /
+ / /_/ / /_/ / /_/ / /  / /  __/ /
+ \\__, /\\__,_/_.___/_/  /_/\\___/_/
+/____/`
+
+const ASCII_LAST = `         __
+  ____ _/ /__  ____  _________ ______
+ / __ \`/ / _ \\/ __ \\/ ___/ __ \`/ ___/
+/ /_/ / /  __/ / / / /__/ /_/ / /
+\\__,_/_/\\___/_/ /_/\\___/\\__,_/_/`
+
 const ABOUT: { bio: Record<Lang, string[]>; now: Record<Lang, { role: string; org: string }[]> } = {
   bio: {
     pt: [
-      "Sou desenvolvedor de software com foco em entregar produtos que funcionam de verdade. Tenho experiência construindo aplicações web, mobile e desktop — do backend ao deploy.",
-      "Fundei a FiveOne Solutions, onde construo soluções com NFC, QR Code, automações e IA. O Mão na Roda — chatbot de consulta veicular com funil de pagamento PIX — está em produção gerando receita recorrente.",
-      "Também tenho um app desktop (Gerador de Recibos) usado operacionalmente por uma empresa, landing pages em uso por clientes reais (STAR Assessoria, Fisio Corpus), o Lunna (SaaS de agendamentos) já em beta, e o MargemReal — motor de Landed Cost para importação China-Brasil — rodando em produção, ainda pré-receita.",
-      "Estudo Cybersecurity com foco em pentest e estou concluindo graduação em Análise e Desenvolvimento de Sistemas.",
-      "Acredito que um bom desenvolvedor entrega software que resolve problemas reais — não apenas código bem escrito.",
+      "Sou o Gabriel, desenvolvedor de software. Construo aplicações web, mobile e desktop, do backend ao deploy, e o que mais me interessa é fazer software que resolve problema de verdade.",
+      "Estou em transição de área: quero trabalhar com hacking, pentest e bug bounty. Hoje estudo segurança do zero, com OverTheWire, PortSwigger e TryHackMe, e documento tudo em público no meu blog, em formato de relatório.",
+      "Estou concluindo a graduação em Análise e Desenvolvimento de Sistemas e trabalho como assistente de T.I.",
+      "Fora do código, sou hiperfocado em filosofia, história e política. Uso o blog também para treinar a escrita e a memória sobre o que eu leio.",
+      "Acredito que um bom desenvolvedor entrega software que resolve problemas reais, não apenas código bem escrito.",
     ],
     en: [
-      "I'm a software developer focused on shipping products that actually work. I have experience building web, mobile and desktop applications — from backend to deploy.",
-      "I founded FiveOne Solutions, where I build solutions with NFC, QR Code, automation and AI. Mão na Roda — a WhatsApp vehicle-lookup chatbot with a PIX payment funnel — is in production generating recurring revenue.",
-      "I also have a desktop app (Gerador de Recibos) used operationally by a company, landing pages in use by real clients (STAR Assessoria, Fisio Corpus), Lunna (a scheduling SaaS) already in beta, and MargemReal — a Landed Cost engine for China-Brazil imports — running in production, still pre-revenue.",
-      "I'm studying Cybersecurity with a focus on pentesting and finishing my degree in Systems Analysis and Development.",
-      "I believe a good developer delivers software that solves real problems — not just well-written code.",
+      "I'm Gabriel, a software developer. I build web, mobile and desktop applications, from backend to deploy, and what interests me most is making software that solves real problems.",
+      "I'm changing fields: I want to work in hacking, pentesting and bug bounty. Right now I'm learning security from scratch with OverTheWire, PortSwigger and TryHackMe, and documenting everything in public on my blog, as reports.",
+      "I'm finishing my degree in Systems Analysis and Development and work as an IT assistant.",
+      "Outside of code, I hyperfocus on philosophy, history and politics. I also use the blog to train my writing and my memory of what I read.",
+      "I believe a good developer delivers software that solves real problems, not just well-written code.",
     ],
   },
   now: {
     pt: [
-      { role: "Co-founder & Dev", org: "FiveOne Solutions" },
-      { role: "Assistente de T.I", org: "Mercado formal" },
+      { role: "Estudando Cybersecurity", org: "OverTheWire · PortSwigger · TryHackMe" },
       { role: "Concluindo ADS", org: "Análise e Desenvolvimento de Sistemas" },
-      { role: "Estudando Cybersecurity", org: "HTB · PortSwigger · TryHackMe" },
+      { role: "Assistente de T.I", org: "Mercado formal" },
+      { role: "Co-founder & Dev", org: "FiveOne Solutions" },
     ],
     en: [
-      { role: "Co-founder & Dev", org: "FiveOne Solutions" },
-      { role: "IT Assistant", org: "Formal job" },
+      { role: "Studying Cybersecurity", org: "OverTheWire · PortSwigger · TryHackMe" },
       { role: "Finishing degree", org: "Systems Analysis and Development" },
-      { role: "Studying Cybersecurity", org: "HTB · PortSwigger · TryHackMe" },
+      { role: "IT Assistant", org: "Formal job" },
+      { role: "Co-founder & Dev", org: "FiveOne Solutions" },
     ],
   },
 }
 
 const STACK = {
-  backend:  ["NestJS", "Node.js", "Express", "PostgreSQL", "Redis", "Prisma", "TypeORM"],
-  mobile:   ["Flutter", "Dart", "BLoC", "Clean Architecture", "Firebase"],
-  frontend: ["Next.js 15", "React", "TypeScript", "Tailwind CSS"],
-  desktop:  ["Python", "PySide6", "Qt6", "ReportLab"],
-  devops:   ["Docker", "Caddy", "Hetzner VPS", "GitHub Actions", "Coolify"],
-  extras:   ["n8n", "Socket.IO", "PostGIS", "Sentry", "MinIO"],
-  learning: ["Cybersecurity", "Pentest", "HTB", "PortSwigger"],
+  backend:  ["NestJS", "PostgreSQL", "Redis", "Prisma"],
+  mobile:   ["Flutter", "Dart", "BLoC", "Firebase"],
+  frontend: ["Next.js", "TypeScript", "Tailwind CSS"],
+  desktop:  ["Python", "PySide6", "ReportLab"],
+  devops:   ["Docker", "Caddy", "GitHub Actions", "Coolify"],
+  extras:   ["Socket.IO", "PostGIS"],
+  learning: ["Cybersecurity", "Pentest", "OverTheWire", "PortSwigger"],
 }
 
 const STATUS_STYLE: Record<string, string> = {
@@ -430,7 +443,7 @@ function Prompt({ path = "~" }: { path?: string }) {
     <span className="select-none shrink-0">
       <span className="text-[#39FF14]">gabriel</span>
       <span className="text-zinc-600">@</span>
-      <span className="text-sky-400">fiveone</span>
+      <span className="text-sky-400">alencar</span>
       <span className="text-zinc-600">:</span>
       <span className="text-violet-400">{path}</span>
       <span className="text-zinc-400">$ </span>
@@ -485,7 +498,7 @@ function HeroTerminal({ lang }: { lang: Lang }) {
   }
 
   return (
-    <TerminalWindow title="gabriel@fiveone: ~">
+    <TerminalWindow title="gabriel@alencar: ~">
       <div className="space-y-0.5 min-h-[120px]">
         {completedWithType.map((l, i) => renderLine(l.text, l.type, i))}
 
@@ -521,7 +534,7 @@ function ProjectsTerminal({ lang, projects }: { lang: Lang; projects: Project[] 
   const [active, setActive] = useState<number | null>(null)
 
   return (
-    <TerminalWindow title={lang === "pt" ? "gabriel@fiveone: ~/projetos" : "gabriel@fiveone: ~/projects"}>
+    <TerminalWindow title={lang === "pt" ? "gabriel@alencar: ~/projetos" : "gabriel@alencar: ~/projects"}>
       {/* ls command */}
       <div className="mb-3">
         <Prompt path={lang === "pt" ? "~/projetos" : "~/projects"} />
@@ -649,7 +662,7 @@ function StackTerminal({ lang }: { lang: Lang }) {
   const entries = Object.entries(STACK)
 
   return (
-    <TerminalWindow title="gabriel@fiveone: ~">
+    <TerminalWindow title="gabriel@alencar: ~">
       <div className="mb-3">
         <Prompt />
         <span className="text-zinc-300">{cmd}</span>
@@ -711,7 +724,7 @@ function AboutTerminal({ lang }: { lang: Lang }) {
   const now = ABOUT.now[lang]
 
   return (
-    <TerminalWindow title={lang === "pt" ? "gabriel@fiveone: ~/sobre" : "gabriel@fiveone: ~/about"}>
+    <TerminalWindow title={lang === "pt" ? "gabriel@alencar: ~/sobre" : "gabriel@alencar: ~/about"}>
       <div className="grid lg:grid-cols-[1.3fr_1fr] gap-8">
         {/* Bio */}
         <div>
@@ -755,7 +768,7 @@ function ContactTerminal({ lang }: { lang: Lang }) {
     : "Open to remote opportunities and freelance projects."
 
   return (
-    <TerminalWindow title="gabriel@fiveone: ~">
+    <TerminalWindow title="gabriel@alencar: ~">
       <div className="space-y-1 text-[13px]">
         <div>
           <Prompt />
@@ -813,7 +826,7 @@ function RecentPosts({ lang }: { lang: Lang }) {
 
   return (
     <section className="max-w-5xl mx-auto px-5 pb-24 scroll-mt-16">
-      <TerminalWindow title="gabriel@fiveone: ~/log">
+      <TerminalWindow title="gabriel@alencar: ~/log">
         <div className="mb-4">
           <Prompt path="~" />
           <span className="text-zinc-300">{cmd}</span>
@@ -868,11 +881,11 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
           <span className="text-sm select-none">
             <span className="text-[#39FF14]">gabriel</span>
-            <span className="text-zinc-700">@fiveone</span>
+            <span className="text-zinc-700 hidden sm:inline">@alencar</span>
             <span className="text-zinc-600">:~</span>
           </span>
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-3 sm:gap-5">
             <a href="#about" className="text-xs text-zinc-600 hover:text-zinc-300 transition-colors hidden sm:block">
               {aboutLabel}
             </a>
@@ -885,10 +898,10 @@ export default function Home() {
             <a href="#contact" className="text-xs text-zinc-600 hover:text-zinc-300 transition-colors hidden sm:block">
               {contactLabel}
             </a>
-            <a href="/log" className="text-xs text-violet-400 hover:text-violet-300 transition-colors hidden sm:block">
+            <a href="/log" className="text-xs text-violet-400 hover:text-violet-300 transition-colors">
               log
             </a>
-            <a href="/roadmap" className="text-xs text-zinc-600 hover:text-zinc-300 transition-colors hidden sm:block">
+            <a href="/roadmap" className="text-xs text-zinc-600 hover:text-zinc-300 transition-colors">
               roadmap
             </a>
 
@@ -921,10 +934,15 @@ export default function Home() {
               {available}
             </div>
 
-            <h1 className="font-sans text-5xl font-bold tracking-tight leading-none mb-2">
-              Gabriel<br />
-              <span className="text-[#39FF14]">Alencar</span>
-            </h1>
+            <h1 className="sr-only">Gabriel Alencar</h1>
+            <div
+              aria-hidden="true"
+              className="font-mono leading-[1.15] select-none overflow-x-auto"
+              style={{ fontSize: "clamp(10px, 3.4vw, 17px)" }}
+            >
+              <pre className="text-zinc-200">{ASCII_FIRST}</pre>
+              <pre className="text-[#39FF14] mt-2">{ASCII_LAST}</pre>
+            </div>
 
             <p className="font-sans text-zinc-400 text-lg mt-3 mb-1">Software Developer</p>
             <p className="font-sans text-zinc-600 text-sm mb-8">Web · Mobile · Desktop</p>
@@ -985,7 +1003,7 @@ export default function Home() {
 
       {/* ── Footer ─────────────────────────────────────────────────────── */}
       <footer className="border-t border-zinc-900 py-6 text-center text-[11px] text-zinc-700">
-        gabriel alencar · fiveone solutions · {new Date().getFullYear()}
+        gabriel alencar · {new Date().getFullYear()}
       </footer>
     </main>
   )

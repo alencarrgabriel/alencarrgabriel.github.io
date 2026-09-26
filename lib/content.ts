@@ -4,9 +4,10 @@ export interface Post {
   type: "writeup" | "til" | "leetcode" | "notes" | "log"
   tags: string[]
   summary: string
+  cover?: { src: string; width: number; height: number; blurDataURL?: string }
   series?: string
   difficulty?: "easy" | "medium" | "hard"
-  platform?: "htb" | "thm" | "portswigger" | "leetcode" | "outro"
+  platform?: "htb" | "thm" | "portswigger" | "leetcode" | "overthewire" | "beecrowd" | "outro"
   draft: boolean
   lang: "pt" | "en"
   slug: string

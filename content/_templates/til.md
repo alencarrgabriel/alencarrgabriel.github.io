@@ -4,6 +4,7 @@ date: 2026-01-01
 type: til
 tags: [til, topico]
 summary: "Uma linha: o fato ou técnica aprendida."
+# cover: ./img/nome-da-imagem.jpg   # opcional — imagem de capa
 draft: true
 lang: pt
 ---

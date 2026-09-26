@@ -4,6 +4,7 @@ date: 2026-01-01
 type: notes
 tags: [topico]
 summary: "Uma linha descrevendo o que essas notas cobrem."
+# cover: ./img/nome-da-imagem.jpg   # opcional — imagem de capa
 series: ""          # opcional — agrupa com um curso ou livro
 draft: true
 lang: pt

@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.date,
       tags: post.tags,
+      ...(post.cover && { images: [post.cover.src] }),
     },
   }
 }
@@ -61,7 +62,7 @@ export default async function PostPage({ params }: Props) {
         <div className="max-w-5xl mx-auto px-5 h-14 flex items-center gap-5">
           <Link href="/" className="text-sm select-none hover:opacity-80 transition-opacity">
             <span className="text-[#39FF14]">gabriel</span>
-            <span className="text-zinc-700">@fiveone</span>
+            <span className="text-zinc-700">@alencar</span>
           </Link>
           <span className="text-zinc-800">/</span>
           <Link href="/log" className="text-zinc-500 hover:text-zinc-300 transition-colors text-xs">log</Link>
@@ -74,7 +75,7 @@ export default async function PostPage({ params }: Props) {
         <div className="lg:grid lg:grid-cols-[1fr_220px] lg:gap-10">
           {/* Main content */}
           <div>
-            <TerminalWindow title={`gabriel@fiveone: ~/log`}>
+            <TerminalWindow title={`gabriel@alencar: ~/log`}>
               {/* Command line */}
               <div className="mb-6">
                 <Prompt path="~/log" />
@@ -95,6 +96,17 @@ export default async function PostPage({ params }: Props) {
                   </>
                 )}
               </div>
+
+              {post.cover && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={post.cover.src}
+                  width={post.cover.width}
+                  height={post.cover.height}
+                  alt=""
+                  className="w-full max-h-72 object-cover object-[50%_20%] rounded-lg border border-zinc-800 mb-5"
+                />
+              )}
 
               <h1 className="text-zinc-100 text-xl font-bold mb-2 leading-tight">{post.title}</h1>
               <p className="text-zinc-500 text-[13px] mb-6">{post.summary}</p>

@@ -62,6 +62,24 @@ lang: pt                    # pt | en (default: pt)
 ---
 ```
 
+### Images
+
+Put image files in `content/log/img/` (download them — don't hotlink Pinterest/CDN URLs, they break).
+Keep them light (JPG/WebP, ~1600px wide, under ~300 KB).
+
+```md
+---
+cover: ./img/bandit.jpg        # optional: banner on the post + thumbnail in the list
+---
+
+## Any section
+
+![Legenda que aparece embaixo da imagem](./img/minha-imagem.jpg)
+```
+
+Velite copies the files to `public/static/` with a hash and rewrites the paths at build time.
+The image alt text is rendered as the caption, so use it to credit the author when it isn't yours.
+
 ### Drafts
 
 - Posts with `draft: true` are **visible in `npm run dev`** but stripped from the generated data in production builds (they never reach the site or the JS bundle).
@@ -107,6 +125,9 @@ Edit `content/roadmap.yaml` to update the study plan. Each item can have:
 ```
 
 The first `wip` item is shown as "now" on `/log` and the home page.
+
+A post shows up under a roadmap item when it shares at least one of the item's `tags`
+(e.g. tag a post `bandit-0-10` to link it to the "Níveis 0–10" item). Keep at most 3 tracks in `wip`.
 
 ---
 

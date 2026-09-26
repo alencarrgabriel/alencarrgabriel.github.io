@@ -1,88 +1,105 @@
+# Um post aparece embaixo de um item quando tem alguma das tags do item.
+# O primeiro item com status "wip" (na ordem do arquivo) vira o "now" da home e do /log.
+# Mantenha no máximo 3 trilhas em andamento por vez.
+
+- track: "OverTheWire — Bandit"
+  items:
+    - name: "Níveis 0–10 · shell básico"
+      status: wip
+      progress: [0, 11]
+      tags: [bandit-0-10]
+    - name: "Níveis 11–20 · redes e processos"
+      status: todo
+      progress: [0, 10]
+      tags: [bandit-11-20]
+    - name: "Níveis 21–33 · cron, scripts e git"
+      status: todo
+      progress: [0, 13]
+      tags: [bandit-21-33]
+
 - track: "PortSwigger Web Security Academy"
   items:
     - name: "SQL injection"
       status: wip
-      progress: [12, 18]
-      tags: [sqli, portswigger]
-    - name: "Authentication"
-      status: todo
-      progress: [0, 14]
-      tags: [auth, portswigger]
-    - name: "Path traversal"
-      status: todo
-      progress: [0, 9]
-      tags: [lfi, portswigger]
-    - name: "Command injection"
-      status: todo
-      progress: [0, 5]
-      tags: [rce, portswigger]
-    - name: "Business logic vulnerabilities"
-      status: todo
-      progress: [0, 11]
-      tags: [logic, portswigger]
+      progress: [0, 18]
+      tags: [sqli]
     - name: "XSS"
       status: todo
       progress: [0, 30]
-      tags: [xss, portswigger]
-
-- track: "HackTheBox — Starting Point"
-  items:
-    - name: "Tier 0"
-      status: done
-      progress: [5, 5]
-      tags: [htb, recon]
-    - name: "Tier 1"
-      status: wip
-      progress: [2, 8]
-      tags: [htb, exploitation]
-    - name: "Tier 2"
+      tags: [xss]
+    - name: "Authentication"
       status: todo
-      progress: [0, 10]
-      tags: [htb, privesc]
-
-- track: "Blind 75 — LeetCode"
-  items:
-    - name: "Arrays & Hashing"
-      status: wip
-      progress: [4, 9]
-      tags: [leetcode, arrays]
-    - name: "Two Pointers"
-      status: todo
-      progress: [0, 5]
-      tags: [leetcode, two-pointers]
-    - name: "Sliding Window"
-      status: todo
-      progress: [0, 6]
-      tags: [leetcode, sliding-window]
-    - name: "Stack"
-      status: todo
-      progress: [0, 7]
-      tags: [leetcode, stack]
-    - name: "Binary Search"
-      status: todo
-      progress: [0, 7]
-      tags: [leetcode, binary-search]
-    - name: "Linked List"
-      status: todo
-      progress: [0, 11]
-      tags: [leetcode, linked-list]
-    - name: "Trees"
-      status: todo
-      progress: [0, 15]
-      tags: [leetcode, trees]
-    - name: "Heap / Priority Queue"
-      status: todo
-      progress: [0, 5]
-      tags: [leetcode, heap]
-    - name: "Backtracking"
+      progress: [0, 14]
+      tags: [auth]
+    - name: "Path traversal"
       status: todo
       progress: [0, 9]
-      tags: [leetcode, backtracking]
-    - name: "Graphs"
+      tags: [path-traversal]
+    - name: "Command injection"
+      status: todo
+      progress: [0, 5]
+      tags: [command-injection]
+    - name: "Business logic vulnerabilities"
+      status: todo
+      progress: [0, 11]
+      tags: [business-logic]
+
+- track: "Lógica de programação — beecrowd (Python)"
+  items:
+    - name: "Iniciante"
+      status: wip
+      progress: [0, 30]
+      tags: [beecrowd-iniciante]
+    - name: "Ad-hoc"
+      status: todo
+      progress: [0, 20]
+      tags: [beecrowd-adhoc]
+    - name: "Strings"
+      status: todo
+      progress: [0, 15]
+      tags: [beecrowd-strings]
+    - name: "Matemática"
+      status: todo
+      progress: [0, 15]
+      tags: [beecrowd-matematica]
+
+- track: "TryHackMe"
+  items:
+    - name: "Pre Security"
+      status: todo
+      tags: [thm-pre-security]
+    - name: "Jr Penetration Tester"
+      status: todo
+      tags: [thm-jr-pentester]
+
+- track: "OverTheWire — Natas"
+  items:
+    - name: "Níveis 0–10 · fundamentos web"
+      status: todo
+      progress: [0, 11]
+      tags: [natas-0-10]
+    - name: "Níveis 11–20 · injeção e sessões"
+      status: todo
+      progress: [0, 10]
+      tags: [natas-11-20]
+    - name: "Níveis 21–33 · lógica e PHP"
       status: todo
       progress: [0, 13]
-      tags: [leetcode, graphs]
-    - name: "Dynamic Programming"
+      tags: [natas-21-33]
+
+- track: "LeetCode (Python)"
+  items:
+    - name: "Easy"
       status: todo
-      progress: [0, 23]
-      tags: [leetcode, dp]
+      progress: [0, 30]
+      tags: [leetcode-easy]
+    - name: "Blind 75"
+      status: todo
+      progress: [0, 75]
+      tags: [blind75]
+
+- track: "HackTheBox"
+  items:
+    - name: "Starting Point — Tier 0"
+      status: todo
+      tags: [htb-tier0]

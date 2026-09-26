@@ -171,7 +171,7 @@ function Img({ src, alt }: { src?: string; alt?: string }) {
   return (
     <figure className="my-6">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt={alt ?? ""} className="rounded-lg border border-zinc-800 w-full" />
+      <img src={src} alt={alt ?? ""} loading="lazy" className="rounded-lg border border-zinc-800 w-full" />
       {alt && <figcaption className="text-center text-zinc-600 text-[11px] mt-2">{alt}</figcaption>}
     </figure>
   )

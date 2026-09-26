@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Roadmap — Gabriel Alencar",
-  description: "Plano de estudos: PortSwigger, HackTheBox, LeetCode Blind 75.",
+  description: "Plano de estudos: Bandit, PortSwigger, beecrowd, TryHackMe, Natas, LeetCode e HackTheBox.",
 }
 
 export default function RoadmapPage() {
@@ -21,7 +21,7 @@ export default function RoadmapPage() {
         <div className="max-w-5xl mx-auto px-5 h-14 flex items-center gap-5">
           <Link href="/" className="text-sm select-none hover:opacity-80">
             <span className="text-[#39FF14]">gabriel</span>
-            <span className="text-zinc-700">@fiveone</span>
+            <span className="text-zinc-700">@alencar</span>
           </Link>
           <span className="text-zinc-800">/</span>
           <span className="text-violet-400 text-xs">roadmap</span>
@@ -29,7 +29,7 @@ export default function RoadmapPage() {
       </nav>
 
       <div className="max-w-5xl mx-auto px-5 pt-24 pb-24 space-y-6">
-        <TerminalWindow title="gabriel@fiveone: ~/roadmap">
+        <TerminalWindow title="gabriel@alencar: ~/roadmap">
           <div className="mb-5">
             <Prompt path="~" />
             <span className="text-zinc-300">cat roadmap.yaml | ./render-progress.sh</span>

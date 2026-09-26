@@ -63,12 +63,12 @@ export default function LogPage() {
         <div className="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
           <Link href="/" className="text-sm select-none hover:opacity-80 transition-opacity">
             <span className="text-[#39FF14]">gabriel</span>
-            <span className="text-zinc-700">@fiveone</span>
+            <span className="text-zinc-700 hidden sm:inline">@alencar</span>
             <span className="text-zinc-600">:~/log</span>
           </Link>
-          <div className="flex items-center gap-5 text-xs">
-            <Link href="/" className="text-zinc-600 hover:text-zinc-300 transition-colors hidden sm:block">home</Link>
-            <Link href="/roadmap" className="text-zinc-600 hover:text-zinc-300 transition-colors hidden sm:block">roadmap</Link>
+          <div className="flex items-center gap-4 sm:gap-5 text-xs">
+            <Link href="/" className="text-zinc-600 hover:text-zinc-300 transition-colors">home</Link>
+            <Link href="/roadmap" className="text-zinc-600 hover:text-zinc-300 transition-colors">roadmap</Link>
             <Link href="/log/tags" className="text-zinc-600 hover:text-zinc-300 transition-colors hidden sm:block">tags</Link>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function LogPage() {
 
       <div className="max-w-5xl mx-auto px-5 pt-24 pb-24">
         {/* Banner */}
-        <TerminalWindow title="gabriel@fiveone: ~/log">
+        <TerminalWindow title="gabriel@alencar: ~/log">
           <div className="mb-4">
             <Prompt path="~" />
             <span className="text-zinc-300">./alencar.log --status</span>
@@ -94,7 +94,7 @@ export default function LogPage() {
 
           <div className="space-y-1 text-[13px]">
             <div className="text-sky-400">
-              [*] {stats.total} posts · {stats.writeups} writeups · {stats.leetcodeDone}/{stats.leetcodeTarget} blind75
+              [*] {stats.total} posts · {stats.writeups} writeups · {stats.progressDone}/{stats.progressTotal} roadmap
             </div>
             <div className="text-sky-400">
               [*] last update: {lastUpdate}

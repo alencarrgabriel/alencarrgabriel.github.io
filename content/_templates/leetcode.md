@@ -4,8 +4,9 @@ date: 2026-01-01
 type: leetcode
 tags: [leetcode, arrays]      # estrutura de dados, padrão (dp, bfs, two-pointers...)
 summary: "Uma linha com o insight principal da solução."
+# cover: ./img/nome-da-imagem.jpg   # opcional — imagem de capa
 difficulty: easy              # easy | medium | hard
-platform: leetcode
+platform: leetcode           # leetcode | beecrowd | outro
 draft: true
 lang: pt
 ---
