@@ -41,8 +41,7 @@ export function PostCard({ post }: Props) {
           src={post.cover.src}
           alt=""
           loading="lazy"
-          className="ml-auto shrink-0 w-14 h-14 sm:w-20 sm:h-14 object-cover rounded border border-zinc-800"
-          style={{ objectPosition: post.coverPosition ?? "50% 20%" }}
+          className="ml-auto shrink-0 w-14 h-14 sm:w-20 sm:h-14 object-contain bg-zinc-950 rounded border border-zinc-800"
         />
       )}
     </div>

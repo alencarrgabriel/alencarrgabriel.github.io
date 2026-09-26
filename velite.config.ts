@@ -9,7 +9,6 @@ const postSchema = s
     tags: s.array(s.string()).default([]),
     summary: s.string().min(1),
     cover: s.image().optional(),
-    coverPosition: s.string().optional(),
     series: s.string().optional(),
     difficulty: s.enum(["easy", "medium", "hard"]).optional(),
     platform: s.enum(["htb", "thm", "portswigger", "leetcode", "overthewire", "beecrowd", "outro"]).optional(),

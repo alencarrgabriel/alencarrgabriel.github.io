@@ -70,7 +70,6 @@ Keep them light (JPG/WebP, ~1600px wide, under ~300 KB).
 ```md
 ---
 cover: ./img/bandit.jpg        # optional: banner on the post + thumbnail in the list
-coverPosition: "50% 20%"       # optional: crop anchor (x y); "50% 0%" = top
 ---
 
 ## Any section

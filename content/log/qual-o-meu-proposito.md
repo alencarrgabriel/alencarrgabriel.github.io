@@ -5,7 +5,6 @@ type: log
 tags: [log, propósito, estudos, letramento]
 summary: "Por que criei esse blog: me cobrar, migrar para hacking e pentest, e treinar uma dificuldade que identifiquei em mim, escrever e reter o que eu leio."
 cover: ./img/batman.jpg
-coverPosition: "50% 5%"      # onde cortar a capa: "50% 0%" = topo, "50% 100%" = base
 draft: false
 lang: pt
 ---
