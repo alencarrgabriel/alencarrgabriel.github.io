@@ -4,6 +4,7 @@ export interface Post {
   type: "writeup" | "til" | "leetcode" | "notes" | "log"
   tags: string[]
   summary: string
+  coverPosition?: string
   cover?: { src: string; width: number; height: number; blurDataURL?: string }
   series?: string
   difficulty?: "easy" | "medium" | "hard"

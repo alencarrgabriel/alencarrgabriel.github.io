@@ -104,7 +104,8 @@ export default async function PostPage({ params }: Props) {
                   width={post.cover.width}
                   height={post.cover.height}
                   alt=""
-                  className="w-full max-h-72 object-cover object-[50%_20%] rounded-lg border border-zinc-800 mb-5"
+                  className="w-full max-h-72 object-cover rounded-lg border border-zinc-800 mb-5"
+                  style={{ objectPosition: post.coverPosition ?? "50% 20%" }}
                 />
               )}
 
