@@ -4,6 +4,7 @@ date: 2026-09-30
 type: notes
 tags: [brasil, letramento, analfabetismo-funcional, política, ensaio]
 summary: "Parte 1 de uma série. A tese: a corrupção, a polarização e o país que se vende barato não são problemas separados — são o que acontece quando a maioria não consegue ler o mundo de forma crítica."
+cover: ./img/camus-lendo.jpg
 series: "Para onde o Brasil está indo"
 part: 1
 draft: false
@@ -66,3 +67,5 @@ Se essas perguntas incomodam, é o texto funcionando. A Parte 2 vem aí.
 - [UNICEF — Analfabetismo funcional alcança 29% dos brasileiros (Inaf 2024)](https://www.unicef.org/brazil/comunicados-de-imprensa/analfabetismo-funcional-nao-apresenta-melhora-e-alcanca-29-por-cento-dos-brasileiros-mesmo-patamar-de-2018-aponta-novo-levantamento-do-inaf)
 - [Inep/MEC — Resultados do Brasil no PISA 2022](https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/acoes-internacionais/divulgados-os-resultados-do-pisa-2022)
 - [Paulo Freire — *A importância do ato de ler* (PDF)](https://educacaointegral.org.br/wp-content/uploads/2014/10/importancia_ato_ler.pdf)
+
+*Capa: Albert Camus lendo o jornal. O autor de* O Mito de Sísifo *— o mesmo Sísifo da capa do [primeiro post deste blog](/log/por-que-esse-blog-existe).*
