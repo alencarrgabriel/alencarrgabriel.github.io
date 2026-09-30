@@ -45,7 +45,7 @@ O Brasil recebe a fábrica, comemora o emprego, e **não pede a tecnologia**. Fi
 
 ## A raiz mais funda: a gente não acha que consegue
 
-![O vira-lata caramelo sobre a bandeira, mascote do auto-deboche nacional.](./img/caramelo.jpg)
+![O vira-lata caramelo.](./img/caramelo.jpg)
 
 Em 1958, Nelson Rodrigues cravou o diagnóstico que nenhum economista alcança. Ele chamou de **["complexo de vira-lata"](https://pt.wikipedia.org/wiki/Complexo_de_vira-lata)**: *"a inferioridade em que o brasileiro se coloca, voluntariamente, em face do resto do mundo"*.
 

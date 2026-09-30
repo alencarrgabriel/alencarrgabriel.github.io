@@ -35,7 +35,7 @@ Porque tem um dado da série inteira que se encaixa aqui como peça de quebra-ca
 
 ## O que você está recusando quando recusa pensar
 
-![Pintura de um mago conjurando poder com um grimório na mão. A imagem não é minha — é ilustração de fantasia, usada aqui como metáfora.](./img/mago.jpg)
+![Conhecimento é poder.](./img/mago.jpg)
 
 Toda mitologia trata o conhecimento como poder literal — o mago é forte porque **lê o grimório**. Não é decoração: quem lê o mundo decide sobre o mundo; quem não lê, é decidido. O meme lá do topo mostra um sujeito recusando um cérebro na mão estendida, dizendo "não, obrigado, eu uso IA". Ele acha que está economizando esforço. Na real, está **entregando o cajado.**
 
@@ -45,9 +45,9 @@ Num país onde só 10% leem com plena autonomia, cada pessoa que terceiriza o pe
 
 Se fosse só atrofiar o nosso pensamento, já seria grave. Mas a IA abriu uma segunda frente, e é aqui que a história fica perigosa de verdade.
 
-![NÃO SÃO ELES — são dois sósias numa praia. A foto é real; as pessoas, não. Mesmo assim ela circulou como se fosse Lula e Bolsonaro de verdade.](./img/sosias-lula-bolsonaro.jpg)
+![Não são eles: são dois sósias.](./img/sosias-lula-bolsonaro.jpg)
 
-Olha essa foto. Por um segundo, pareceu Lula e Bolsonaro, né? **Não são eles** — são dois sósias. A foto é real, mas a leitura que ela induz é falsa, e ela rodou os grupos de família como se fosse verdade. E repara no tamanho do problema: isso é a versão **analógica**, dois sujeitos parecidos numa praia. Não precisou de tecnologia nenhuma pra te enganar por um segundo.
+Olha essa foto. Por um segundo, pareceu Lula e Bolsonaro, né? **Não são eles** — são dois sósias. A foto é real, mas a primeira leitura que ela induz é falsa. E repara no tamanho do problema: isso é a versão **analógica**, dois sujeitos parecidos numa praia. Não precisou de tecnologia nenhuma pra te enganar por um segundo.
 
 Agora imagina quando a fábrica da mentira é a **IA** — que não depende de achar um sósia, gera o rosto exato de quem ela quiser, na cena que ela quiser, em dez segundos e aos milhões. Junta as duas frentes e sente o peso: de um lado, um povo cuja capacidade de ler criticamente está **encolhendo**; do outro, uma máquina que tornou a mentira **convincente e infinita**. É a tempestade perfeita. A IA não inventou a mentira — mentira sempre existiu, dois sósias já bastavam. Ela industrializou a mentira **boa**, a que passa no teste de um olhar rápido. E o olhar rápido é o único que a maioria tem tempo (e treino) de dar.
 
