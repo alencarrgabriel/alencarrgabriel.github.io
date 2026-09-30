@@ -17,6 +17,31 @@ html {
   color: #fff;
 }
 
+/* Post body: Tailwind's reset zeroes margins, so give prose room to breathe */
+.prose-content p {
+  margin: 0 0 1.25em;
+}
+.prose-content ul,
+.prose-content ol {
+  margin: 0 0 1.25em;
+  padding-left: 1.4em;
+}
+.prose-content ul { list-style: disc; }
+.prose-content ol { list-style: decimal; }
+.prose-content li {
+  margin-bottom: 0.5em;
+  padding-left: 0.2em;
+}
+.prose-content li::marker { color: #52525b; }
+.prose-content strong { color: #f4f4f5; }
+.prose-content hr {
+  border: 0;
+  border-top: 1px solid #27272a;
+  margin: 2.5em 0;
+}
+.prose-content h2 { margin-top: 2.5rem; }
+.prose-content blockquote p:last-child { margin-bottom: 0; }
+
 ::-webkit-scrollbar {
   width: 4px;
 }

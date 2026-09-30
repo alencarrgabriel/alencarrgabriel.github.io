@@ -7,7 +7,10 @@ const isDev = process.env.NODE_ENV !== "production"
 export function getPublishedPosts(all: Post[]): Post[] {
   return all
     .filter((p) => isDev || !p.draft)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .sort(
+      (a, b) =>
+        new Date(b.date).getTime() - new Date(a.date).getTime() || (b.part ?? 0) - (a.part ?? 0)
+    )
 }
 
 export function groupPostsByMonth(posts: Post[]): Record<string, Post[]> {

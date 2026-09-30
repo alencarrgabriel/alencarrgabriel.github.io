@@ -177,6 +177,22 @@ function Img({ src, alt }: { src?: string; alt?: string }) {
   )
 }
 
+// Responsive embedded player (YouTube etc.) — plays inline, no navigation away.
+function IFrame({ src, title }: { src?: string; title?: string }) {
+  return (
+    <div className="my-6 relative w-full aspect-video rounded-lg overflow-hidden border border-zinc-800 bg-black">
+      <iframe
+        src={src}
+        title={title ?? "vídeo"}
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+        className="absolute inset-0 w-full h-full"
+      />
+    </div>
+  )
+}
+
 // ─── MDX renderer ─────────────────────────────────────────────────────────────
 
 const components = {
@@ -190,6 +206,7 @@ const components = {
   th: Th,
   td: Td,
   img: Img,
+  iframe: IFrame,
 }
 
 interface Props {

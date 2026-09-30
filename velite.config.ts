@@ -10,6 +10,7 @@ const postSchema = s
     summary: s.string().min(1),
     cover: s.image().optional(),
     series: s.string().optional(),
+    part: s.number().optional(), // ordem dentro da série (desempata posts com a mesma data)
     difficulty: s.enum(["easy", "medium", "hard"]).optional(),
     platform: s.enum(["htb", "thm", "portswigger", "leetcode", "overthewire", "beecrowd", "outro"]).optional(),
     draft: s.boolean().default(false),

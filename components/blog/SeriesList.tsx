@@ -10,7 +10,10 @@ interface Props {
 export function SeriesList({ series, posts, currentSlug }: Props) {
   const seriesPosts = posts
     .filter((p) => p.series === series)
-    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .sort(
+      (a, b) =>
+        new Date(a.date).getTime() - new Date(b.date).getTime() || (a.part ?? 0) - (b.part ?? 0)
+    )
 
   if (seriesPosts.length < 2) return null
 

@@ -6,6 +6,7 @@ export interface Post {
   summary: string
   cover?: { src: string; width: number; height: number; blurDataURL?: string }
   series?: string
+  part?: number
   difficulty?: "easy" | "medium" | "hard"
   platform?: "htb" | "thm" | "portswigger" | "leetcode" | "overthewire" | "beecrowd" | "outro"
   draft: boolean
