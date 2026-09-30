@@ -45,8 +45,6 @@ O Brasil recebe a fábrica, comemora o emprego, e **não pede a tecnologia**. Fi
 
 ## A raiz mais funda: a gente não acha que consegue
 
-![O vira-lata caramelo sobre a bandeira — virou o mascote do auto-deboche nacional. Imagem de circulação popular, usada aqui como símbolo.](./img/caramelo.jpg)
-
 Em 1958, Nelson Rodrigues cravou o diagnóstico que nenhum economista alcança. Ele chamou de **["complexo de vira-lata"](https://pt.wikipedia.org/wiki/Complexo_de_vira-lata)**: *"a inferioridade em que o brasileiro se coloca, voluntariamente, em face do resto do mundo"*.
 
 Repara na palavra: **voluntariamente**. O vira-lata caramelo virou meme nacional justamente porque a gente se reconhece nele — o auto-deboche de quem já decidiu que não vai dar certo. E aqui a série fecha o círculo: **um povo que não lê não conhece a própria história.** Não lembra que o Brasil já fez avião de classe mundial, que já teve projeto de desenvolvimento, que a Coreia já foi mais pobre que a gente. Sem essa memória, "somos assim mesmo" parece verdade natural — e vira profecia autorrealizável. Quem não lê o passado aceita qualquer versão do presente, inclusive a de que não há saída.
