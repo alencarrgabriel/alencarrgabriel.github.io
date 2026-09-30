@@ -65,7 +65,7 @@ Junta as quatro partes e olha o desenho inteiro:
 
 É um ciclo que se retroalimenta. Mas não é destino. E aqui está a única boa notícia da série: **a saída começa exatamente onde o problema começa.** Não numa eleição, não num salvador, não num partido. Começa na coisa mais simples e mais difícil que existe — **ler, pensar e cobrar**. Uma pessoa de cada vez, aprendendo a ler o mundo de novo.
 
-É literalmente por isso que [esse blog existe](/log/qual-o-meu-proposito). Eu comecei ele pra tratar o meu próprio problema de leitura. Escrevendo essa série, entendi que ele é o do país. Não sei se um blog muda alguma coisa. Sei que fingir que não vejo, muda menos.
+Não sei se um texto muda alguma coisa. Sei que fingir que não vejo muda menos.
 
 Se você leu até aqui — as quatro partes, os links, as fontes —, você já fez a única coisa que essa série pede. Você **leu**. É por onde tudo começa.
 

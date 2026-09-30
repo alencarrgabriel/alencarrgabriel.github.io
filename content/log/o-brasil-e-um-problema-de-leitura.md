@@ -11,9 +11,9 @@ draft: false
 lang: pt
 ---
 
-Esse é o primeiro de três textos em que eu tento entender, em público, para onde o Brasil está indo. Não como quem tem a resposta — como quem está pesquisando e quer parar de aceitar explicação mastigada. Se você já leu o [porquê desse blog](/log/qual-o-meu-proposito), sabe que eu comecei ele admitindo uma dificuldade minha: ler e não conseguir guardar, explicar, transformar o que li em pensamento próprio.
+Esse é o primeiro de quatro textos sobre um assunto que me incomoda faz tempo: para onde o Brasil está indo. Não é o tema principal daqui, que é segurança. É só uma coisa que não sai da minha cabeça, e escrever é o jeito que eu tenho de organizar o que penso. Não escrevo como quem tem a resposta, e sim como quem pesquisou e cansou de explicação mastigada.
 
-Quanto mais eu pesquisei pra escrever sobre a crise do país, mais eu percebi uma coisa incômoda: **o meu problema pessoal é o problema do Brasil.**
+Quanto mais eu pesquisei, mais uma ideia se repetiu. É ela que costura os quatro textos.
 
 ## A tese
 
@@ -68,4 +68,4 @@ Se essas perguntas incomodam, é o texto funcionando. A Parte 2 vem aí.
 - [Inep/MEC — Resultados do Brasil no PISA 2022](https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/acoes-internacionais/divulgados-os-resultados-do-pisa-2022)
 - [Paulo Freire — *A importância do ato de ler* (PDF)](https://educacaointegral.org.br/wp-content/uploads/2014/10/importancia_ato_ler.pdf)
 
-*Capa: Albert Camus lendo o jornal. O autor de* O Mito de Sísifo *— o mesmo Sísifo da capa do [primeiro post deste blog](/log/por-que-esse-blog-existe).*
+*Capa: Albert Camus lendo jornal.*
