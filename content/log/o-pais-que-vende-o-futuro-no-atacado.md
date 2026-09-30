@@ -4,7 +4,7 @@ date: 2026-09-30
 type: notes
 tags: [brasil, economia, desenvolvimento, china, soberania, ensaio]
 summary: "Parte 4 e final. Um povo que não pensa não constrói — ele aluga. A conta que chega quando um país que não lê vai negociar com o mundo: desindustrialização, a comparação com a Coreia, o complexo de vira-lata e o relógio demográfico correndo."
-cover: ./img/caramelo.jpg
+cover: ./img/cachorro-estudando.jpg
 series: "Para onde o Brasil está indo"
 part: 4
 draft: false
